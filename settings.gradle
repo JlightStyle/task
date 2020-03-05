@@ -1,0 +1,4 @@
+include ':Task2'
+include ':Task1'
+include ':app'
+rootProject.name = "TestWork"

@@ -1,0 +1,18 @@
+1. Не возможно создать обьект User - нет конструктора, который принимает данные параметры.
+2. Конструктор принимает int и String, хотя должно быть int и Vacancy.
+   Есть два выхода:
+    - public User(long id, String vacancy) {
+                  this.id = id;
+                  this.vacancy = new Vacancy(vacancy);
+              }
+    - public User(long id, Vacancy vacancy) {
+                  this.id = id;
+                  this.vacancy = vacancy;
+              }
+    Далее идем по 1 пути
+3. Vacancy не имеет полей для хранения. Добавим поле String vacancyName;
+4. Vacancy не имеет конструктора или сеттера. Добавим конструктор, принимающий String.
+5. Метод String getVacancy возвращает "engineer". Меняем на vacancyName;
+
+Теперь реализация возвращает желаемый результат.
+НО , если классы лежат в одном классе с static void main(), то необходимо пометить class User и class Vacancy, как static.
