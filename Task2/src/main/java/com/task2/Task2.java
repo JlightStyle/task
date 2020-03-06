@@ -7,7 +7,7 @@ public class Task2 {
     public static void main(String[] args){
         int[] price = {5,100,20,66,16,200,555,964};
         try {
-            int[] response = decryptData(price,50,3,6);
+            int[] response = decryptData(price,50,3,5);
             for(int i: response){
                 System.out.println(i);
             }
