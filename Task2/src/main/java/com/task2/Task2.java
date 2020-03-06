@@ -16,6 +16,9 @@ public class Task2 {
                       @IntRange(from = 1) int discount,
                       @IntRange(from = 0) int offset,
                       @IntRange(from = 1) int readLength) {
+        if(price.length<offset+readLength){
+            throw new ArrayIndexOutOfBoundsException("Выход за пределы");
+        }
         int[] response = new int[readLength];
         int responseCounter=0;
         for(int i=offset;i<offset+readLength;i++){
