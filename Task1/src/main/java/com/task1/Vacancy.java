@@ -1,7 +1,7 @@
 package com.task1;
 
 class Vacancy {
-    String vacancyName;
+    private String vacancyName;
 
     public Vacancy(String vacancyName) {
         this.vacancyName = vacancyName;
